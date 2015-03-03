@@ -1,0 +1,258 @@
+body{
+    background-image:url("backrougndsite-1.png") ;
+    background-repeat: no-repeat;
+
+}
+h1{
+    text-align: center;
+    color: hotpink;
+    font-family:"Comic Sans MS";
+    font-size: xx-large;
+    width: 400px;
+    font-style:italic;
+    text-shadow: 3px 3px 3px #000;
+
+    margin: 50px 10px 40px 200px;
+
+}
+p{
+    text-align: left;
+    color: black;
+    font-family: "arial black";
+    font-size: small;
+    margin: 30px 30px 50px 50px;
+
+}
+
+
+.holder{
+    height: 553px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+
+
+
+.sidebar{
+    width: 200px;
+    height: 500px;
+    background-color: white;
+    float: left;
+    background-repeat: no-repeat;
+    list-style-type: none;
+
+
+}
+
+h3{
+    padding-top: 220px;
+    color: hotpink;
+    text-align:center;
+    font-family: Monaco;
+    font-size: larger;
+
+
+}
+
+
+.smile{
+    width: 200px;
+    height: 136px;
+    background-color: blue;
+    background-image: url("../img/smile.png");
+    margin-left: auto;
+
+}
+
+
+.body{
+    text-align: center;
+    height: 500px;
+    width: 800px;
+    background-color: white;
+    float: right;
+
+}
+.box{
+    width: 250px;
+    height: 163px;
+    background-color: black;
+    margin: 85px 200px 85px 0;
+   float: right;
+    background-image: url("fun.jpg");
+
+}
+
+.boxpic{
+    width: 250px;
+    height: 170px;
+    background-color: blue;
+    margin: 80px 50px 50px 50px;
+    float: left;
+    background-image: url("HOTELFRONT%20THE%20ONE.jpg");
+
+}
+.bild{
+    width: 100px;
+    height: 112px;
+    background-color: black;
+    float: right;
+    background-image: url("hotelping.png");
+}
+h2{
+    text-align: left;
+    margin: 30px 30px 50px 50px;
+    color: hotpink;
+    font-family:"Arial";
+    font-size: x-large;
+
+}
+
+
+
+
+.footer{
+    height: 25px;
+    width: 1000px;
+    background-color: rgba(0,200,0,0.5);
+    text-align: center;
+}
+.clearfloat{
+    clear: both;
+}
+
+.menu{
+    width: 1000px;
+    height: 25px;
+    background-color: rgba(0,200,0,0.5);
+
+}
+
+.menu,.mainnavbar ul {
+    list-style-type: none;
+    width: 100%;
+
+}
+
+.menu,ul.mainnavbar li{
+    float: left;
+    height: auto;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+
+    overflow: hidden;
+}
+.navbar, ul.mainnavbar li a{
+    height: 15px;
+    width: auto;
+    padding: 0 35px 0 35px;
+    float: left;
+    color: #FFF;
+}
+
+.navbar, ul.mainnavbar li a:hover{
+    color: hotpink;
+}
+
+
+
+
+
+
+.clasp {
+    background: #aaaaaa;
+    border: 1px solid #999999;
+    -webkit-border-radius: 4px;
+    -webkit-box-shadow: 0 -1px 5px rgba(0,0,0,0.4), inset -1px 1px 2px white;
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: -5px;
+    width: 4px;
+    z-index: 2000;
+}
+.clasp.hole-left {
+    left: 9px;
+}
+.clasp.hole-right {
+    right: 9px;
+}
+
+.hole {
+    background: #99ccff;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: 0 -1px 0 black, inset 0 0 20px #878787;
+    display: block;
+    height: 8px;
+    position: absolute;
+    top: 8px;
+    width: 8px;
+}
+
+.hole-left {
+    left: 19px;
+}
+.hole-right {
+    right: 20px;
+}
+
+#calendar {
+    background: hotpink;
+    -webkit-box-shadow: 0 0 20px #000;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    width: 185px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#month {
+    background: -webkit-linear-gradient(#bcde4b, #8bc620);
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    text-shadow: 0 -1px 0 #878787;
+    width: 216px;
+}
+
+#days {
+    background: -webkit-linear-gradient(#f4f4f4, #ebebeb);
+    -webkit-box-shadow: 0 1px 0 #aaaaaa;
+}
+
+table.days {
+    color: #888888;
+    font-size: 13px;
+    width: 216px;
+}
+
+table.day td, table.days {
+    width: 30px;
+}
+
+table.day td {
+    background: #f4f0f7;
+    color: #878787;
+    height: 30px;
+    -webkit-box-shadow: 0 -1px 0 white;
+}
+
+table.day td.old-month {
+    color: #aaaaaa;
+}
+
+table.day td.selected {
+    background: -webkit-linear-gradient(bcde4b, 8bc620);
+    color: white;
+    text-shadow: 0 -1px 0 #878787;
+}
+
+table.day td.appoint {
+    border-bottom: 2px solid #99ccff;
+}

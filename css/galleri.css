@@ -1,0 +1,75 @@
+.rum{
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    float: right;
+    background-image: url("../Screen%20Shot%202014-04-07%20at%204.47.13%20PM.jpg");
+}
+.rum1{
+    width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+     background-image: url("../img/rum1.jpg");
+    margin: 0px 0px 0px 320px;
+}
+
+.rum3{
+    width: 200px;
+    height: 100px;
+    background-color: violet;
+    float: left;
+    margin: 0px 0px 0px 50px;
+    background-image: url("../img/rum.jpg");
+}
+
+p{
+    width: 200px;
+}
+
+.soft{
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    float: right;
+    background-image: url("../img/sofitn.jpg");
+}
+.park{
+    width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+    margin: 0px 0px 0px 320px;
+     background-image: url("../img/Hotelförisg.jpg");
+}
+
+.pool{
+    width: 200px;
+    height: 100px;
+    background-color: violet;
+    float: left;
+    margin: 0px 0px 0px 50px;
+    background-image: url("../img/sköön.jpg");
+}
+
+h3{
+    padding-top: 74px;
+    color: hotpink;
+    text-align:center;
+    font-family: Monaco;
+    font-size: larger;
+
+
+}
+
+.bild1{
+    width: 185px;
+    height: 219px;
+    margin-left:10px ;
+    margin-top: 10px;
+    background-image: url("../img/calender.png");
+}
+.footer{
+    height: 25px;
+    width: 1000px;
+    background-color: rgba(0,200,0,0.5);
+    text-align: center;
+}

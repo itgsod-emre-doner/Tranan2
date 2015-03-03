@@ -1,0 +1,41 @@
+body {
+    background-image: url(../img/baklava.jpg);
+}
+
+h1 {
+    color:white;
+}
+
+h2 {
+    color:white;
+}
+
+h3 {
+    color:white;
+}
+
+h4 {
+    color:white;
+}
+
+h5 {
+    color:white;
+}
+
+@media (orientation: landscape){
+
+    #box{
+        display: none;
+    }
+    #box2{
+        display: true;
+    }
+}
+
+@media (orientation:portrait){
+    #box2{
+        display: none;
+    }
+    }#box{
+    display: true;
+}

@@ -1,0 +1,85 @@
+
+
+h6{
+    text-align: left;
+    color: hotpink;
+    font-family:"Comic Sans MS";
+    font-size:large;
+    margin: 10px 10px 0px 40px;
+}
+
+.rum{
+    width: 150px;
+    height: 25px;
+    background-color: white;
+
+    float: left;
+
+}
+.rum1{
+    width: 150px;
+    height: 25px;
+    background-color: white;
+
+    margin: 0px 0px 0px 370px;
+
+}
+
+.rum3{
+    width: 150px;
+    height: 25px;
+    background-color: white;
+    float: left;
+    margin: 0px 0px 0px 30px;
+
+}
+    p{
+        margin: 0px 0px 20px 40px;
+    }
+    h5{
+        margin: 0px 0px 0px 40px;
+        text-align: left;
+        color: gray;
+    }
+
+    .dede{
+        width: 200px;
+        height: 80px;
+        background-color: black;
+        margin: 0px 0px 0px 35px;
+        background-image: url("../img/bokning.svg");
+        float: left;
+    }
+.dede1{
+    width: 200px;
+    height: 80px;
+    background-color: white;
+    background-repeat: no-repeat;
+
+    background-image: url("../bokning2%20copy.svg");
+    margin: 0px 0px 0px 370px;
+}
+
+h3{
+    padding-top: 74px;
+    color: hotpink;
+    text-align:center;
+    font-family: Monaco;
+    font-size: larger;
+
+
+}
+
+.bild1{
+    width: 185px;
+    height: 219px;
+    margin-left:10px ;
+    margin-top: 10px;
+    background-image: url("../img/calender.png");
+}
+.footer{
+    height: 25px;
+    width: 1000px;
+    background-color: rgba(0,200,0,0.5);
+    text-align: center;
+}

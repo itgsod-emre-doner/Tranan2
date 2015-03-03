@@ -1,0 +1,70 @@
+body{
+    background-image: url("../img/backrougndsite-1.png");
+}
+
+h1{
+    text-align: center;
+    color: black;
+    font-style:italic;
+    font-size: xx-large;
+    text-shadow: 3px 3px 3px #FFF;
+
+
+
+}
+
+h2{
+    text-align: left;
+    margin: 30px 30px 50px 50px;
+    color: black;
+    font-family:"Luci";
+    font-size: xx-large;
+
+}
+
+.boxpicis{
+    width: 200px;
+    height: 154px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin: 130px 0px 0px 300px;
+    border: 2px solid black;
+}
+
+.boxis{
+    width: 200px;
+    height: 157px;
+    background-color: white;
+    float: left;
+    margin: 80px 20px 0px 100px;
+    background-image: url("../img/familjestund.jpg");
+
+
+}
+
+h3{
+    padding-top: 74px;
+    color: hotpink;
+    text-align:center;
+    font-family: Monaco;
+    font-size: larger;
+
+
+}
+
+.bild1{
+    width: 185px;
+    height: 219px;
+    margin-left:10px ;
+    margin-top: 10px;
+    background-image: url("../img/calender.png");
+}
+
+.footer{
+    height: 25px;
+    width: 1000px;
+    background-color: rgba(0,200,0,0.5);
+    text-align: center;
+}

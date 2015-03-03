@@ -1,0 +1,49 @@
+###body {
+    background-image: url(../img/sao2.gif);
+###}
+
+body {
+    background-color: white;
+}
+
+h1 {
+    background-color: brown;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+h2 {
+    background-color: brown;
+    text-align: center;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+div {
+    text-align: center;
+    color:black;
+}
+p {
+    text-align: center;
+    color:black;
+}
+#nav {
+    line-height:30px;
+    background-color: brown;
+    text-align: center;
+    height:1050px;
+    width:100px;
+    float:left;s
+    padding:5px;
+}
+#section {
+    text-align: center;
+    width:600px;
+    float:left;
+    padding:10px;
+}
+
+a {
+    color:white;
+}
+

@@ -1,0 +1,2598 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/newanimetest.css"/>
+</head>
+<body>
+<html><head>
+<title>Donzu's Anime List - MyAnimeList.net</title>
+<meta name="Description" content="Start cataloging anime you've watched or manga you've read. Browse through our extensive anime and manga database. Get anime or manga suggestions, recommendations and reviews. View top rated anime and manga. Create anime and manga favorites. Tons more too!">
+<meta name="Keywords" content="anime, animelist, myanimelist, anime list, log anime seen, catalog anime watched, anime reviews, top anime, anime characters, favorite anime, anime discussion, anime information, manga series, manga information, top manga, mangalist, manga list, manga, manga reviews, voice actors, seiyuu">
+<meta name="Author" content="Garrett Gyssler">
+
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="http://cdn.myanimelist.net/js/hover.v5.js"></script>
+<script type="text/javascript" src="http://cdn.myanimelist.net/js/jquery.fancybox.pack.v1.js"></script>
+
+<script type="text/javascript" src="http://cdn.myanimelist.net/js/dimensions.js"></script>
+<style type="text/css">
+
+
+/*
+// Self-explanatory
+*/
+BODY
+{
+    margin: 0;
+    color: #000000;
+    font-size: 11.00px;
+    font-family: Verdana, Arial;
+    background-color: #FFFFFF;
+}
+
+/*
+// Determines the positioning of your list
+*/
+
+#list_surround
+{
+    margin: 0 auto;
+    width: 920px;
+}
+
+/*
+// All links on your list
+*/
+
+a
+{
+    color: #51819f;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #51819f;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #51819f;
+    text-decoration: underline;
+}
+
+/*
+// Alternating row color 1
+*/
+
+.td1
+{
+
+    color: #000000;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #ABABAB;
+    padding: 2px;
+    background-color: #FFFFFF;
+}
+
+/*
+// Alternating row color 2
+*/
+
+.td2
+{
+
+    color: #000000;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #ABABAB;
+    padding: 2px;
+    background-color: #F1F1F1;
+}
+
+/*
+// This represents the "Anime Title", "Score", "# Eps" columns
+*/
+
+.table_header
+{
+
+    color: #000000;
+    border-width: 1px 1px 1px 0px;
+    border-style: solid;
+    border-color: #ABABAB;
+    background-color: #E7F1F7;
+    padding: 2px;
+}
+
+/*
+// headerLink represents the color of the links inside the table_header
+*/
+
+.table_headerLink
+{
+    color: ;
+}
+
+.table_headerLink:Visited
+{
+    color: ;
+}
+
+.table_headerLink:Hover
+{
+    color: ;
+}
+
+/*
+// Controls the select form decoration (the drop down select box)
+*/
+
+.form
+{
+    border-width: 1px 1px 1px 1px;
+    border-color: #ABABAB;
+    border-style: solid;
+    color: #000000;
+    padding: 2px;
+    font-size: 11.00px;
+    font-family: Verdana, Arial;
+}
+
+
+/* Which 'status' up top is selected? */
+
+.status_selected
+{
+
+    color: #000000;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #ABABAB;
+    padding: 2px;
+    background-color: #FFFFFF;
+}
+
+.status_not_selected
+{
+
+    color: #000000;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #ABABAB;
+    padding: 2px;
+    background-color: #F1F1F1;
+}
+
+/*
+Header classes for Currently Watching, Completed, Dropped, etc...
+*/
+
+.header_cw
+{
+
+}
+
+.header_completed
+{
+
+}
+
+.header_onhold
+{
+
+}
+
+.header_dropped
+{
+
+}
+
+.header_ptw
+{
+
+}
+
+.header_title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.category_totals
+{
+
+}
+
+#grand_totals
+{
+    text-align: center;
+}
+
+/* header_al is the div surrounding "User's Anime List" at the top */
+
+.header_al
+{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* header_al_links is the div with your "Profile" and "MyAnimeList home" links */
+.header_al_links
+{
+
+}
+
+/* controls what styles you can give to all the anime titles in your list */
+.animetitle
+{
+    font-weight: bold;
+}
+
+/*
+copyright contains the "Producted by Garrett Gyssler" text
+DO NOT REMOVE OR HIDE THIS DIV
+IF FOUND TO BE REMOVED, YOUR LIST WILL BE REMOVED TOO
+*/
+
+#copyright
+{
+    padding-top: 6px;
+    text-align: center;
+    margin: 0 auto;
+    width: 920px;
+}
+
+
+</style>
+
+<script type="text/javascript" src="http://cdn.myanimelist.net/js/list.v16.js"></script>
+<link rel="stylesheet" href="http://cdn.myanimelist.net/css/list.v5.css" type="text/css">
+<script type="text/javascript" src="http://cdn.myanimelist.net/js/myanimelist.v21.js"></script>
+<link rel="stylesheet" type="text/css" href="http://cdn.myanimelist.net/css/jquery.fancybox.v3.css">
+<link rel="stylesheet" type="text/css" href="http://cdn.myanimelist.net/css/dialog.v1.css">
+<link rel="search" type="application/opensearchdescription+xml" href="http://cdn.myanimelist.net/plugins/myanimelist.xml" title="MyAnimeList">
+
+<link rel="shortcut icon" href="http://cdn.myanimelist.net/images/faviconv5.ico">
+
+<!-- BEGIN TRIGGER TAG INITIALIZATION -->
+<script type="text/javascript" src="http://cdn.triggertag.gorillanation.com/js/triggertag.js"></script>
+<script type="text/javascript">getTrigger('4834');</script><script src="http://cdn.assets.craveonline.com/js/tracking/gn_tracking.js" type="text/javascript"></script><script src="http://cdn.triggertag.gorillanation.com/js/4834_US.php" type="text/javascript"></script>
+<!-- END TRIGGER TAG INITIALIZATION -->
+<!-- GAM HEADER SCRIPT -->
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+    GS_googleAddAdSenseService("ca-pub-1304704158939332");
+    GS_googleEnableAllServices();
+</script><script src="http://partner.googleadservices.com/gampad/google_ads.js"></script>
+<script type="text/javascript">
+    GA_googleUseIframeRendering();
+</script>
+<!-- END OF GAM HEADER SCRIPT -->
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-369102-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</head>
+
+<body onload="">
+<table id="mal_control_strip" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td id="mal_cs_listinfo">
+            <div><strong><a href="/profile/Donzu"><strong>Donzu</strong></a></strong></div>
+            <div><a href="/panel.php?go=logout">Logout</a></div>
+        </td>
+        <td id="mal_cs_links">
+            <div><a href="/addtolist.php?hidenav=1" class="List_LightBox">Add to List</a>&nbsp;&nbsp;<a href="/">Home</a></div>
+            <div><a href="/animelist/Donzu">Anime List</a>&nbsp;&nbsp;<a href="/mangalist/Donzu">Manga List</a></div>
+        </td>
+        <td id="mal_cs_otherlinks">
+            <div><strong>You are viewing your anime list</strong></div>
+            <div><a href="/history/Donzu">History</a>&nbsp;&nbsp;<a href="/forum/">Forum</a>&nbsp;&nbsp;<a href="/panel.php?go=export">Export</a></div>
+
+        </td>
+
+        <td id="mal_cs_powered" valign="top" align="right"><a href="/"><img src="http://cdn.myanimelist.net/images/list-top-powered.gif"></a>
+            <div id="search"><input id="searchBox" value="Search" type="textbox">  <img src="http://cdn.myanimelist.net/images/magnify.gif" id="searchListButton"></div>
+        </td>
+    </tr>
+    </tbody></table>
+
+<div id="list_surround">
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="920" align="center">
+    <tbody><tr><td class="status_not_selected" style="border-width: 1px 1px 1px 1px;" width="165" nowrap="" align="center"><a href="/animelist/Donzu&amp;status=1&amp;order=0" title="6 Entries">Currently Watching</a></td><td width="75" class="status_not_selected" style="border-width: 1px 1px 1px 0;" align="center"><a href="/animelist/Donzu&amp;status=2&amp;order=0" title="50 Entries">Completed</a></td><td width="75" class="status_not_selected" style="border-width: 1px 1px 1px 0;" align="center"><a href="/animelist/Donzu&amp;status=3&amp;order=0" title="3 Entries">On Hold</a></td><td width="75" class="status_not_selected" style="border-width: 1px 1px 1px 0;" align="center"><a href="/animelist/Donzu&amp;status=4&amp;order=0" title="0 Entries">Dropped</a></td><td width="115" class="status_not_selected" style="border-width: 1px 1px 1px 0;" align="center"><a href="/animelist/Donzu&amp;status=6&amp;order=0" title="19 Entries">Plan to Watch</a></td><td width="115" class="status_selected" style="border-width: 1px 1px 1px 0;" align="center"><a href="/animelist/Donzu&amp;status=7&amp;order=0" title"show="" all="" entries"="">All Anime</a></td></tr>
+    </tbody></table>
+<br><br>
+<table border="0" cellpadding="0" cellspacing="0" width="920" align="center" class="header_cw">
+    <tbody><tr>
+        <td>
+            <div class="header_title">
+                <span>Grundskolan Yarbedobrak</span>
+            </div></td>
+    </tr>
+    </tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td class="table_header" width="30" align="center" style="border-width: 1px 1px 1px 1px;"><b><span class="table_headerLink">#</span></b></td>
+        <td class="table_header" style="border-left-width: 0"><a href="/animelist/Donzu&amp;show=0&amp;order=1" class="table_headerLink"><strong>Anime
+            Title</strong></a></td>
+        <td class="table_header" width="45" align="center"><strong><a href="/animelist/Donzu&amp;show=0&amp;order=4" class="table_headerLink" rel="#infoscore">Score</a></strong>
+            <div id="infoscore" style="display: none;">10 - Masterpiece<br>
+                9 - Great<br>
+                8 - Very Good<br>
+                7 - Good<br>
+                6 - Fine<br>
+                5 - Average<br>
+                4 - Bad<br>
+                3 - Very Bad<br>
+                2 - Horrible<br>
+                1 - Unwatchable</div>
+        </td>
+        <td class="table_header" width="50" align="center" nowrap=""><strong><a href="/animelist/Donzu&amp;show=0&amp;order=6" class="table_headerLink" rel="#infotype">Type</a></strong>
+            <div id="infotype" style="display: none;">TV (Television Series)<br>
+                Movie<br>
+                OVA (Original Video Animation)</div>
+        </td>
+
+        <td class="table_header" width="70" align="center" nowrap=""><strong><a href="/animelist/Donzu&amp;show=0&amp;order=12" class="table_headerLink">Progress</a></strong></td>
+        <td class="table_header" width="125" align="center" nowrap=""><strong>Tags</strong></td>
+    </tr>
+    </tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">1</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=22043&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu22043" onclick="getExpand(22043,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/22043/Fairy_Tail_(2014)" target="_blank" class="animetitle" title="Anime Information"><span>Fairy Tail (2014)</span></a>  <small>Airing</small> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(22043);" title="Click to bring up a text box to edit your current score"><span id="scoreval22043">10</span></a><div id="scorediv22043" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,22043);" id="scoretext22043" size="2"> <input type="button" value="Go" onclick="anime_updateScore(22043);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText22043" onclick="determineEpVisibility('22043');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output22043">29</span>/-</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(22043,'0','1',1,22043);">+</a><div style="display: none;" id="holdDynamicEpNum22043">30</div><form name="changeEpXMLHTTP[22043]" method="get" onsubmit="return changeep_loadurl('22043','0','1',1,0,22043);" style="display: inline;"><span id="epLayer22043" style="display: none;"><input type="text" name="change_ep_num[22043]" id="epID22043" size="2"><br><input type="submit" value="Go" name="submitEp[22043]" onclick="return changeep_loadurl('22043','0','1',1,0,22043);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow22043"><a href="javascript:void(0);" onclick="tag_showEdit(22043,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit22043"></div><span id="tagLinks22043">&nbsp;</span>
+            <span id="tagRow22043" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more22043" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">2</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=23321&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu23321" onclick="getExpand(23321,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/23321/Log_Horizon_2nd_Season" target="_blank" class="animetitle" title="Anime Information"><span>Log Horizon 2nd Season</span></a>  <small>Airing</small> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(23321);" title="Click to bring up a text box to edit your current score"><span id="scoreval23321">-</span></a><div id="scorediv23321" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,23321);" id="scoretext23321" size="2"> <input type="button" value="Go" onclick="anime_updateScore(23321);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText23321" onclick="determineEpVisibility('23321');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output23321">2</span>/25</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(23321,'25','1',1,23321);">+</a><div style="display: none;" id="holdDynamicEpNum23321">3</div><form name="changeEpXMLHTTP[23321]" method="get" onsubmit="return changeep_loadurl('23321','25','1',1,0,23321);" style="display: inline;"><span id="epLayer23321" style="display: none;"><input type="text" name="change_ep_num[23321]" id="epID23321" size="2"><br><input type="submit" value="Go" name="submitEp[23321]" onclick="return changeep_loadurl('23321','25','1',1,0,23321);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow23321"><a href="javascript:void(0);" onclick="tag_showEdit(23321,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit23321"></div><span id="tagLinks23321">&nbsp;</span>
+            <span id="tagRow23321" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more23321" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">3</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=24455&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu24455" onclick="getExpand(24455,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/24455/Madan_no_Ou_to_Vanadis" target="_blank" class="animetitle" title="Anime Information"><span>Madan no Ou to Vanadis</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(24455);" title="Click to bring up a text box to edit your current score"><span id="scoreval24455">-</span></a><div id="scorediv24455" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,24455);" id="scoretext24455" size="2"> <input type="button" value="Go" onclick="anime_updateScore(24455);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText24455" onclick="determineEpVisibility('24455');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output24455">7</span>/13</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(24455,'13','2',1,24455);">+</a><div style="display: none;" id="holdDynamicEpNum24455">8</div><form name="changeEpXMLHTTP[24455]" method="get" onsubmit="return changeep_loadurl('24455','13','2',1,0,24455);" style="display: inline;"><span id="epLayer24455" style="display: none;"><input type="text" name="change_ep_num[24455]" id="epID24455" size="2"><br><input type="submit" value="Go" name="submitEp[24455]" onclick="return changeep_loadurl('24455','13','2',1,0,24455);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow24455"><a href="javascript:void(0);" onclick="tag_showEdit(24455,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit24455"></div><span id="tagLinks24455">&nbsp;</span>
+            <span id="tagRow24455" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more24455" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">4</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=1735&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu1735" onclick="getExpand(1735,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/1735/Naruto:_Shippuuden" target="_blank" class="animetitle" title="Anime Information"><span>Naruto: Shippuuden</span></a>  <small>Airing</small> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(1735);" title="Click to bring up a text box to edit your current score"><span id="scoreval1735">10</span></a><div id="scorediv1735" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,1735);" id="scoretext1735" size="2"> <input type="button" value="Go" onclick="anime_updateScore(1735);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText1735" onclick="determineEpVisibility('1735');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output1735">382</span>/-</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(1735,'0','1',1,1735);">+</a><div style="display: none;" id="holdDynamicEpNum1735">383</div><form name="changeEpXMLHTTP[1735]" method="get" onsubmit="return changeep_loadurl('1735','0','1',1,0,1735);" style="display: inline;"><span id="epLayer1735" style="display: none;"><input type="text" name="change_ep_num[1735]" id="epID1735" size="2"><br><input type="submit" value="Go" name="submitEp[1735]" onclick="return changeep_loadurl('1735','0','1',1,0,1735);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow1735"><a href="javascript:void(0);" onclick="tag_showEdit(1735,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit1735"></div><span id="tagLinks1735">&nbsp;</span>
+            <span id="tagRow1735" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more1735" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">5</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=21&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu21" onclick="getExpand(21,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/21/One_Piece" target="_blank" class="animetitle" title="Anime Information"><span>One Piece</span></a>  <small>Airing</small> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(21);" title="Click to bring up a text box to edit your current score"><span id="scoreval21">10</span></a><div id="scorediv21" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,21);" id="scoretext21" size="2"> <input type="button" value="Go" onclick="anime_updateScore(21);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText21" onclick="determineEpVisibility('21');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output21">665</span>/-</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(21,'0','1',1,21);">+</a><div style="display: none;" id="holdDynamicEpNum21">666</div><form name="changeEpXMLHTTP[21]" method="get" onsubmit="return changeep_loadurl('21','0','1',1,0,21);" style="display: inline;"><span id="epLayer21" style="display: none;"><input type="text" name="change_ep_num[21]" id="epID21" size="2"><br><input type="submit" value="Go" name="submitEp[21]" onclick="return changeep_loadurl('21','0','1',1,0,21);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow21"><a href="javascript:void(0);" onclick="tag_showEdit(21,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit21"></div><span id="tagLinks21">&nbsp;</span>
+            <span id="tagRow21" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more21" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">6</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=27899&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu27899" onclick="getExpand(27899,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/27899/Tokyo_Ghoul_√A" target="_blank" class="animetitle" title="Anime Information"><span>Tokyo Ghoul √A</span></a>  <small>Airing</small> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(27899);" title="Click to bring up a text box to edit your current score"><span id="scoreval27899">-</span></a><div id="scorediv27899" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,27899);" id="scoretext27899" size="2"> <input type="button" value="Go" onclick="anime_updateScore(27899);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText27899" onclick="determineEpVisibility('27899');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output27899">1</span>/12</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(27899,'12','1',1,27899);">+</a><div style="display: none;" id="holdDynamicEpNum27899">2</div><form name="changeEpXMLHTTP[27899]" method="get" onsubmit="return changeep_loadurl('27899','12','1',1,0,27899);" style="display: inline;"><span id="epLayer27899" style="display: none;"><input type="text" name="change_ep_num[27899]" id="epID27899" size="2"><br><input type="submit" value="Go" name="submitEp[27899]" onclick="return changeep_loadurl('27899','12','1',1,0,27899);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow27899"><a href="javascript:void(0);" onclick="tag_showEdit(27899,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit27899"></div><span id="tagLinks27899">&nbsp;</span>
+            <span id="tagRow27899" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more27899" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+
+<table border="0" width="920" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td class="category_totals">
+            TV: 6,
+            OVA: 0,
+            Movies: 0,
+            <span title="Specials">Spcl.</span>: 0,
+            Eps: 1,086,
+            <span title="Downloaded Episodes">DL Eps</span>: 0,
+            Days: 17.88,
+            Mean Score: 10.0,
+            Score <span title="Deviation">Dev.</span>: 1.69
+        </td>
+    </tr>
+    </tbody></table>
+<br>		<table border="0" cellpadding="0" cellspacing="0" width="920" align="center" class="header_completed">
+    <tbody><tr>
+        <td>
+            <div class="header_title">
+                <span>Hur gammal är du din jävel?</span>
+            </div></td>
+    </tr>
+    </tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td class="table_header" width="30" align="center" style="border-width: 1px 1px 1px 1px;"><b><span class="table_headerLink">#</span></b></td>
+        <td class="table_header" style="border-left-width: 0"><a href="/animelist/Donzu&amp;show=0&amp;order=1" class="table_headerLink"><strong>Anime
+            Title</strong></a></td>
+        <td class="table_header" width="45" align="center"><strong><a href="/animelist/Donzu&amp;show=0&amp;order=4" class="table_headerLink" rel="#infoscore">Score</a></strong>
+            <div id="infoscore" style="display: none;">10 - Masterpiece<br>
+                9 - Great<br>
+                8 - Very Good<br>
+                7 - Good<br>
+                6 - Fine<br>
+                5 - Average<br>
+                4 - Bad<br>
+                3 - Very Bad<br>
+                2 - Horrible<br>
+                1 - Unwatchable</div>
+        </td>
+        <td class="table_header" width="50" align="center" nowrap=""><strong><a href="/animelist/Donzu&amp;show=0&amp;order=6" class="table_headerLink" rel="#infotype">Type</a></strong>
+            <div id="infotype" style="display: none;">TV (Television Series)<br>
+                Movie<br>
+                OVA (Original Video Animation)</div>
+        </td>
+
+        <td class="table_header" width="70" align="center" nowrap=""><strong><a href="/animelist/Donzu&amp;show=0&amp;order=12" class="table_headerLink">Progress</a></strong></td>
+        <td class="table_header" width="125" align="center" nowrap=""><strong>Tags</strong></td>
+    </tr>
+    </tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">1</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=22199&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu22199" onclick="getExpand(22199,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/22199/Akame_ga_Kill!" target="_blank" class="animetitle" title="Anime Information"><span>Akame ga Kill!</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(22199);" title="Click to bring up a text box to edit your current score"><span id="scoreval22199">10</span></a><div id="scorediv22199" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,22199);" id="scoretext22199" size="2"> <input type="button" value="Go" onclick="anime_updateScore(22199);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">24</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow22199"><a href="javascript:void(0);" onclick="tag_showEdit(22199,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit22199"></div><span id="tagLinks22199">&nbsp;</span>
+            <span id="tagRow22199" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more22199" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">2</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=6547&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu6547" onclick="getExpand(6547,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/6547/Angel_Beats!" target="_blank" class="animetitle" title="Anime Information"><span>Angel Beats!</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(6547);" title="Click to bring up a text box to edit your current score"><span id="scoreval6547">10</span></a><div id="scorediv6547" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,6547);" id="scoretext6547" size="2"> <input type="button" value="Go" onclick="anime_updateScore(6547);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">13</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow6547"><a href="javascript:void(0);" onclick="tag_showEdit(6547,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit6547"></div><span id="tagLinks6547">&nbsp;</span>
+            <span id="tagRow6547" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more6547" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">3</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=11111&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu11111" onclick="getExpand(11111,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/11111/Another" target="_blank" class="animetitle" title="Anime Information"><span>Another</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(11111);" title="Click to bring up a text box to edit your current score"><span id="scoreval11111">7</span></a><div id="scorediv11111" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,11111);" id="scoretext11111" size="2"> <input type="button" value="Go" onclick="anime_updateScore(11111);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">12</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow11111"><a href="javascript:void(0);" onclick="tag_showEdit(11111,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit11111"></div><span id="tagLinks11111">&nbsp;</span>
+            <span id="tagRow11111" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more11111" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">4</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=9919&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu9919" onclick="getExpand(9919,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/9919/Ao_no_Exorcist" target="_blank" class="animetitle" title="Anime Information"><span>Ao no Exorcist</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(9919);" title="Click to bring up a text box to edit your current score"><span id="scoreval9919">9</span></a><div id="scorediv9919" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,9919);" id="scoretext9919" size="2"> <input type="button" value="Go" onclick="anime_updateScore(9919);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">25</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow9919"><a href="javascript:void(0);" onclick="tag_showEdit(9919,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit9919"></div><span id="tagLinks9919">&nbsp;</span>
+            <span id="tagRow9919" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more9919" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">5</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=13677&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu13677" onclick="getExpand(13677,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/13677/Ao_no_Exorcist_(Movie)_Special" target="_blank" class="animetitle" title="Anime Information"><span>Ao no Exorcist (Movie) Special</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(13677);" title="Click to bring up a text box to edit your current score"><span id="scoreval13677">9</span></a><div id="scorediv13677" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,13677);" id="scoretext13677" size="2"> <input type="button" value="Go" onclick="anime_updateScore(13677);"></div></td>
+        <td class="td1" width="50" align="center">Special</td>
+        <td class="td1" align="center" width="70">1</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow13677"><a href="javascript:void(0);" onclick="tag_showEdit(13677,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit13677"></div><span id="tagLinks13677">&nbsp;</span>
+            <span id="tagRow13677" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more13677" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">6</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=9513&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu9513" onclick="getExpand(9513,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/9513/Beelzebub" target="_blank" class="animetitle" title="Anime Information"><span>Beelzebub</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(9513);" title="Click to bring up a text box to edit your current score"><span id="scoreval9513">8</span></a><div id="scorediv9513" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,9513);" id="scoretext9513" size="2"> <input type="button" value="Go" onclick="anime_updateScore(9513);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">60</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow9513"><a href="javascript:void(0);" onclick="tag_showEdit(9513,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit9513"></div><span id="tagLinks9513">&nbsp;</span>
+            <span id="tagRow9513" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more9513" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">7</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=20787&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu20787" onclick="getExpand(20787,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/20787/Black_Bullet" target="_blank" class="animetitle" title="Anime Information"><span>Black Bullet</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(20787);" title="Click to bring up a text box to edit your current score"><span id="scoreval20787">8</span></a><div id="scorediv20787" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,20787);" id="scoretext20787" size="2"> <input type="button" value="Go" onclick="anime_updateScore(20787);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">13</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow20787"><a href="javascript:void(0);" onclick="tag_showEdit(20787,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit20787"></div><span id="tagLinks20787">&nbsp;</span>
+            <span id="tagRow20787" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more20787" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">8</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=269&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu269" onclick="getExpand(269,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/269/Bleach" target="_blank" class="animetitle" title="Anime Information"><span>Bleach</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(269);" title="Click to bring up a text box to edit your current score"><span id="scoreval269">10</span></a><div id="scorediv269" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,269);" id="scoretext269" size="2"> <input type="button" value="Go" onclick="anime_updateScore(269);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">366</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow269"><a href="javascript:void(0);" onclick="tag_showEdit(269,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit269"></div><span id="tagLinks269">&nbsp;</span>
+            <span id="tagRow269" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more269" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">9</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=4835&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu4835" onclick="getExpand(4835,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/4835/Bleach:_Fade_to_Black_-_Kimi_no_Na_wo_Yobu" target="_blank" class="animetitle" title="Anime Information"><span>Bleach: Fade to Black - Kimi no Na wo Yobu</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(4835);" title="Click to bring up a text box to edit your current score"><span id="scoreval4835">9</span></a><div id="scorediv4835" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,4835);" id="scoretext4835" size="2"> <input type="button" value="Go" onclick="anime_updateScore(4835);"></div></td>
+        <td class="td1" width="50" align="center">Movie</td>
+        <td class="td1" align="center" width="70">1</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow4835"><a href="javascript:void(0);" onclick="tag_showEdit(4835,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit4835"></div><span id="tagLinks4835">&nbsp;</span>
+            <span id="tagRow4835" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more4835" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">10</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=8247&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu8247" onclick="getExpand(8247,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/8247/Bleach:_Jigokuhen" target="_blank" class="animetitle" title="Anime Information"><span>Bleach: Jigokuhen</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(8247);" title="Click to bring up a text box to edit your current score"><span id="scoreval8247">8</span></a><div id="scorediv8247" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,8247);" id="scoretext8247" size="2"> <input type="button" value="Go" onclick="anime_updateScore(8247);"></div></td>
+        <td class="td2" width="50" align="center">Movie</td>
+        <td class="td2" align="center" width="70">1</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow8247"><a href="javascript:void(0);" onclick="tag_showEdit(8247,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit8247"></div><span id="tagLinks8247">&nbsp;</span>
+            <span id="tagRow8247" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more8247" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">11</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=762&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu762" onclick="getExpand(762,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/762/Bleach:_Memories_in_the_Rain" target="_blank" class="animetitle" title="Anime Information"><span>Bleach: Memories in the Rain</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(762);" title="Click to bring up a text box to edit your current score"><span id="scoreval762">8</span></a><div id="scorediv762" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,762);" id="scoretext762" size="2"> <input type="button" value="Go" onclick="anime_updateScore(762);"></div></td>
+        <td class="td1" width="50" align="center">Special</td>
+        <td class="td1" align="center" width="70">1</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow762"><a href="javascript:void(0);" onclick="tag_showEdit(762,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit762"></div><span id="tagLinks762">&nbsp;</span>
+            <span id="tagRow762" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more762" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">12</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=1686&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu1686" onclick="getExpand(1686,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/1686/Bleach:_Memories_of_Nobody" target="_blank" class="animetitle" title="Anime Information"><span>Bleach: Memories of Nobody</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(1686);" title="Click to bring up a text box to edit your current score"><span id="scoreval1686">8</span></a><div id="scorediv1686" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,1686);" id="scoretext1686" size="2"> <input type="button" value="Go" onclick="anime_updateScore(1686);"></div></td>
+        <td class="td2" width="50" align="center">Movie</td>
+        <td class="td2" align="center" width="70">1</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow1686"><a href="javascript:void(0);" onclick="tag_showEdit(1686,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit1686"></div><span id="tagLinks1686">&nbsp;</span>
+            <span id="tagRow1686" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more1686" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">13</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=2889&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu2889" onclick="getExpand(2889,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/2889/Bleach:_The_DiamondDust_Rebellion" target="_blank" class="animetitle" title="Anime Information"><span>Bleach: The DiamondDust Rebellion</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(2889);" title="Click to bring up a text box to edit your current score"><span id="scoreval2889">9</span></a><div id="scorediv2889" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,2889);" id="scoretext2889" size="2"> <input type="button" value="Go" onclick="anime_updateScore(2889);"></div></td>
+        <td class="td1" width="50" align="center">Movie</td>
+        <td class="td1" align="center" width="70">1</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow2889"><a href="javascript:void(0);" onclick="tag_showEdit(2889,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit2889"></div><span id="tagLinks2889">&nbsp;</span>
+            <span id="tagRow2889" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more2889" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">14</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=834&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu834" onclick="getExpand(834,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/834/Bleach:_The_Sealed_Sword_Frenzy" target="_blank" class="animetitle" title="Anime Information"><span>Bleach: The Sealed Sword Frenzy</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(834);" title="Click to bring up a text box to edit your current score"><span id="scoreval834">7</span></a><div id="scorediv834" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,834);" id="scoretext834" size="2"> <input type="button" value="Go" onclick="anime_updateScore(834);"></div></td>
+        <td class="td2" width="50" align="center">Special</td>
+        <td class="td2" align="center" width="70">1</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow834"><a href="javascript:void(0);" onclick="tag_showEdit(834,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit834"></div><span id="tagLinks834">&nbsp;</span>
+            <span id="tagRow834" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more834" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">15</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=11633&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu11633" onclick="getExpand(11633,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/11633/Blood_Lad" target="_blank" class="animetitle" title="Anime Information"><span>Blood Lad</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(11633);" title="Click to bring up a text box to edit your current score"><span id="scoreval11633">8</span></a><div id="scorediv11633" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,11633);" id="scoretext11633" size="2"> <input type="button" value="Go" onclick="anime_updateScore(11633);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">10</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow11633"><a href="javascript:void(0);" onclick="tag_showEdit(11633,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit11633"></div><span id="tagLinks11633">&nbsp;</span>
+            <span id="tagRow11633" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more11633" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">16</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=18441&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu18441" onclick="getExpand(18441,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/18441/Blood_Lad:_Wagahai_wa_Neko_de_wa_Nai" target="_blank" class="animetitle" title="Anime Information"><span>Blood Lad: Wagahai wa Neko de wa Nai</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(18441);" title="Click to bring up a text box to edit your current score"><span id="scoreval18441">8</span></a><div id="scorediv18441" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,18441);" id="scoretext18441" size="2"> <input type="button" value="Go" onclick="anime_updateScore(18441);"></div></td>
+        <td class="td2" width="50" align="center">OVA</td>
+        <td class="td2" align="center" width="70">1</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow18441"><a href="javascript:void(0);" onclick="tag_showEdit(18441,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit18441"></div><span id="tagLinks18441">&nbsp;</span>
+            <span id="tagRow18441" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more18441" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">17</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=14345&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu14345" onclick="getExpand(14345,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/14345/Btooom!" target="_blank" class="animetitle" title="Anime Information"><span>Btooom!</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(14345);" title="Click to bring up a text box to edit your current score"><span id="scoreval14345">10</span></a><div id="scorediv14345" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,14345);" id="scoretext14345" size="2"> <input type="button" value="Go" onclick="anime_updateScore(14345);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">12</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow14345"><a href="javascript:void(0);" onclick="tag_showEdit(14345,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit14345"></div><span id="tagLinks14345">&nbsp;</span>
+            <span id="tagRow14345" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more14345" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">18</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=1818&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu1818" onclick="getExpand(1818,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/1818/Claymore" target="_blank" class="animetitle" title="Anime Information"><span>Claymore</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(1818);" title="Click to bring up a text box to edit your current score"><span id="scoreval1818">9</span></a><div id="scorediv1818" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,1818);" id="scoretext1818" size="2"> <input type="button" value="Go" onclick="anime_updateScore(1818);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">26</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow1818"><a href="javascript:void(0);" onclick="tag_showEdit(1818,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit1818"></div><span id="tagLinks1818">&nbsp;</span>
+            <span id="tagRow1818" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more1818" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">19</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=2025&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu2025" onclick="getExpand(2025,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/2025/Darker_than_Black:_Kuro_no_Keiyakusha" target="_blank" class="animetitle" title="Anime Information"><span>Darker than Black: Kuro no Keiyakusha</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(2025);" title="Click to bring up a text box to edit your current score"><span id="scoreval2025">9</span></a><div id="scorediv2025" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,2025);" id="scoretext2025" size="2"> <input type="button" value="Go" onclick="anime_updateScore(2025);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">25</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow2025"><a href="javascript:void(0);" onclick="tag_showEdit(2025,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit2025"></div><span id="tagLinks2025">&nbsp;</span>
+            <span id="tagRow2025" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more2025" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">20</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=7338&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu7338" onclick="getExpand(7338,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/7338/Darker_than_Black:_Kuro_no_Keiyakusha_Gaiden" target="_blank" class="animetitle" title="Anime Information"><span>Darker than Black: Kuro no Keiyakusha Gaiden</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(7338);" title="Click to bring up a text box to edit your current score"><span id="scoreval7338">10</span></a><div id="scorediv7338" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,7338);" id="scoretext7338" size="2"> <input type="button" value="Go" onclick="anime_updateScore(7338);"></div></td>
+        <td class="td2" width="50" align="center">Special</td>
+        <td class="td2" align="center" width="70">4</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow7338"><a href="javascript:void(0);" onclick="tag_showEdit(7338,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit7338"></div><span id="tagLinks7338">&nbsp;</span>
+            <span id="tagRow7338" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more7338" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">21</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=6573&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu6573" onclick="getExpand(6573,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/6573/Darker_than_Black:_Ryuusei_no_Gemini" target="_blank" class="animetitle" title="Anime Information"><span>Darker than Black: Ryuusei no Gemini</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(6573);" title="Click to bring up a text box to edit your current score"><span id="scoreval6573">10</span></a><div id="scorediv6573" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,6573);" id="scoretext6573" size="2"> <input type="button" value="Go" onclick="anime_updateScore(6573);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">12</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow6573"><a href="javascript:void(0);" onclick="tag_showEdit(6573,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit6573"></div><span id="tagLinks6573">&nbsp;</span>
+            <span id="tagRow6573" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more6573" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">22</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=6880&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu6880" onclick="getExpand(6880,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/6880/Deadman_Wonderland" target="_blank" class="animetitle" title="Anime Information"><span>Deadman Wonderland</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(6880);" title="Click to bring up a text box to edit your current score"><span id="scoreval6880">8</span></a><div id="scorediv6880" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,6880);" id="scoretext6880" size="2"> <input type="button" value="Go" onclick="anime_updateScore(6880);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">12</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow6880"><a href="javascript:void(0);" onclick="tag_showEdit(6880,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit6880"></div><span id="tagLinks6880">&nbsp;</span>
+            <span id="tagRow6880" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more6880" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">23</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=1535&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu1535" onclick="getExpand(1535,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/1535/Death_Note" target="_blank" class="animetitle" title="Anime Information"><span>Death Note</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(1535);" title="Click to bring up a text box to edit your current score"><span id="scoreval1535">10</span></a><div id="scorediv1535" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,1535);" id="scoretext1535" size="2"> <input type="button" value="Go" onclick="anime_updateScore(1535);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">37</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow1535"><a href="javascript:void(0);" onclick="tag_showEdit(1535,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit1535"></div><span id="tagLinks1535">&nbsp;</span>
+            <span id="tagRow1535" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more1535" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">24</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=6702&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu6702" onclick="getExpand(6702,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/6702/Fairy_Tail" target="_blank" class="animetitle" title="Anime Information"><span>Fairy Tail</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(6702);" title="Click to bring up a text box to edit your current score"><span id="scoreval6702">9</span></a><div id="scorediv6702" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,6702);" id="scoretext6702" size="2"> <input type="button" value="Go" onclick="anime_updateScore(6702);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">175</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow6702"><a href="javascript:void(0);" onclick="tag_showEdit(6702,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit6702"></div><span id="tagLinks6702">&nbsp;</span>
+            <span id="tagRow6702" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more6702" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">25</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=10087&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu10087" onclick="getExpand(10087,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/10087/Fate/Zero" target="_blank" class="animetitle" title="Anime Information"><span>Fate/Zero</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(10087);" title="Click to bring up a text box to edit your current score"><span id="scoreval10087">7</span></a><div id="scorediv10087" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,10087);" id="scoretext10087" size="2"> <input type="button" value="Go" onclick="anime_updateScore(10087);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">13</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow10087"><a href="javascript:void(0);" onclick="tag_showEdit(10087,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit10087"></div><span id="tagLinks10087">&nbsp;</span>
+            <span id="tagRow10087" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more10087" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">26</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=11741&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu11741" onclick="getExpand(11741,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/11741/Fate/Zero_2nd_Season" target="_blank" class="animetitle" title="Anime Information"><span>Fate/Zero 2nd Season</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(11741);" title="Click to bring up a text box to edit your current score"><span id="scoreval11741">8</span></a><div id="scorediv11741" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,11741);" id="scoretext11741" size="2"> <input type="button" value="Go" onclick="anime_updateScore(11741);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">12</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow11741"><a href="javascript:void(0);" onclick="tag_showEdit(11741,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit11741"></div><span id="tagLinks11741">&nbsp;</span>
+            <span id="tagRow11741" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more11741" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">27</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=121&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu121" onclick="getExpand(121,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/121/Fullmetal_Alchemist" target="_blank" class="animetitle" title="Anime Information"><span>Fullmetal Alchemist</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(121);" title="Click to bring up a text box to edit your current score"><span id="scoreval121">10</span></a><div id="scorediv121" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,121);" id="scoretext121" size="2"> <input type="button" value="Go" onclick="anime_updateScore(121);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">51</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow121"><a href="javascript:void(0);" onclick="tag_showEdit(121,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit121"></div><span id="tagLinks121">&nbsp;</span>
+            <span id="tagRow121" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more121" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">28</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=5114&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu5114" onclick="getExpand(5114,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/5114/Fullmetal_Alchemist:_Brotherhood" target="_blank" class="animetitle" title="Anime Information"><span>Fullmetal Alchemist: Brotherhood</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(5114);" title="Click to bring up a text box to edit your current score"><span id="scoreval5114">8</span></a><div id="scorediv5114" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,5114);" id="scoretext5114" size="2"> <input type="button" value="Go" onclick="anime_updateScore(5114);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">64</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow5114"><a href="javascript:void(0);" onclick="tag_showEdit(5114,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit5114"></div><span id="tagLinks5114">&nbsp;</span>
+            <span id="tagRow5114" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more5114" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">29</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=21431&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu21431" onclick="getExpand(21431,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/21431/Gokukoku_no_Brynhildr" target="_blank" class="animetitle" title="Anime Information"><span>Gokukoku no Brynhildr</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(21431);" title="Click to bring up a text box to edit your current score"><span id="scoreval21431">8</span></a><div id="scorediv21431" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,21431);" id="scoretext21431" size="2"> <input type="button" value="Go" onclick="anime_updateScore(21431);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">13</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow21431"><a href="javascript:void(0);" onclick="tag_showEdit(21431,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit21431"></div><span id="tagLinks21431">&nbsp;</span>
+            <span id="tagRow21431" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more21431" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">30</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=10793&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu10793" onclick="getExpand(10793,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/10793/Guilty_Crown" target="_blank" class="animetitle" title="Anime Information"><span>Guilty Crown</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(10793);" title="Click to bring up a text box to edit your current score"><span id="scoreval10793">9</span></a><div id="scorediv10793" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,10793);" id="scoretext10793" size="2"> <input type="button" value="Go" onclick="anime_updateScore(10793);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">22</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow10793"><a href="javascript:void(0);" onclick="tag_showEdit(10793,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit10793"></div><span id="tagLinks10793">&nbsp;</span>
+            <span id="tagRow10793" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more10793" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">31</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=8074&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu8074" onclick="getExpand(8074,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/8074/Highschool_of_the_Dead" target="_blank" class="animetitle" title="Anime Information"><span>Highschool of the Dead</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(8074);" title="Click to bring up a text box to edit your current score"><span id="scoreval8074">8</span></a><div id="scorediv8074" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,8074);" id="scoretext8074" size="2"> <input type="button" value="Go" onclick="anime_updateScore(8074);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">12</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow8074"><a href="javascript:void(0);" onclick="tag_showEdit(8074,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit8074"></div><span id="tagLinks8074">&nbsp;</span>
+            <span id="tagRow8074" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more8074" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">32</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=11061&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu11061" onclick="getExpand(11061,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/11061/Hunter_x_Hunter_(2011)" target="_blank" class="animetitle" title="Anime Information"><span>Hunter x Hunter (2011)</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(11061);" title="Click to bring up a text box to edit your current score"><span id="scoreval11061">10</span></a><div id="scorediv11061" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,11061);" id="scoretext11061" size="2"> <input type="button" value="Go" onclick="anime_updateScore(11061);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">148</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow11061"><a href="javascript:void(0);" onclick="tag_showEdit(11061,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit11061"></div><span id="tagLinks11061">&nbsp;</span>
+            <span id="tagRow11061" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more11061" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">33</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=17265&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu17265" onclick="getExpand(17265,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/17265/Log_Horizon" target="_blank" class="animetitle" title="Anime Information"><span>Log Horizon</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(17265);" title="Click to bring up a text box to edit your current score"><span id="scoreval17265">8</span></a><div id="scorediv17265" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,17265);" id="scoretext17265" size="2"> <input type="button" value="Go" onclick="anime_updateScore(17265);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">25</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow17265"><a href="javascript:void(0);" onclick="tag_showEdit(17265,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit17265"></div><span id="tagLinks17265">&nbsp;</span>
+            <span id="tagRow17265" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more17265" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">34</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=17247&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu17247" onclick="getExpand(17247,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/17247/Machine-Doll_wa_Kizutsukanai" target="_blank" class="animetitle" title="Anime Information"><span>Machine-Doll wa Kizutsukanai</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(17247);" title="Click to bring up a text box to edit your current score"><span id="scoreval17247">6</span></a><div id="scorediv17247" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,17247);" id="scoretext17247" size="2"> <input type="button" value="Go" onclick="anime_updateScore(17247);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">12</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow17247"><a href="javascript:void(0);" onclick="tag_showEdit(17247,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit17247"></div><span id="tagLinks17247">&nbsp;</span>
+            <span id="tagRow17247" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more17247" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">35</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=18115&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu18115" onclick="getExpand(18115,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/18115/Magi:_The_Kingdom_of_Magic" target="_blank" class="animetitle" title="Anime Information"><span>Magi: The Kingdom of Magic</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(18115);" title="Click to bring up a text box to edit your current score"><span id="scoreval18115">9</span></a><div id="scorediv18115" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,18115);" id="scoretext18115" size="2"> <input type="button" value="Go" onclick="anime_updateScore(18115);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">25</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow18115"><a href="javascript:void(0);" onclick="tag_showEdit(18115,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit18115"></div><span id="tagLinks18115">&nbsp;</span>
+            <span id="tagRow18115" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more18115" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">36</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=14513&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu14513" onclick="getExpand(14513,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/14513/Magi:_The_Labyrinth_of_Magic" target="_blank" class="animetitle" title="Anime Information"><span>Magi: The Labyrinth of Magic</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(14513);" title="Click to bring up a text box to edit your current score"><span id="scoreval14513">9</span></a><div id="scorediv14513" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,14513);" id="scoretext14513" size="2"> <input type="button" value="Go" onclick="anime_updateScore(14513);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">25</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow14513"><a href="javascript:void(0);" onclick="tag_showEdit(14513,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit14513"></div><span id="tagLinks14513">&nbsp;</span>
+            <span id="tagRow14513" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more14513" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">37</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=19769&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu19769" onclick="getExpand(19769,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/19769/Mahou_Sensou" target="_blank" class="animetitle" title="Anime Information"><span>Mahou Sensou</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(19769);" title="Click to bring up a text box to edit your current score"><span id="scoreval19769">8</span></a><div id="scorediv19769" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,19769);" id="scoretext19769" size="2"> <input type="button" value="Go" onclick="anime_updateScore(19769);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">12</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow19769"><a href="javascript:void(0);" onclick="tag_showEdit(19769,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit19769"></div><span id="tagLinks19769">&nbsp;</span>
+            <span id="tagRow19769" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more19769" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">38</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=10620&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu10620" onclick="getExpand(10620,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/10620/Mirai_Nikki_(TV)" target="_blank" class="animetitle" title="Anime Information"><span>Mirai Nikki (TV)</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(10620);" title="Click to bring up a text box to edit your current score"><span id="scoreval10620">8</span></a><div id="scorediv10620" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,10620);" id="scoretext10620" size="2"> <input type="button" value="Go" onclick="anime_updateScore(10620);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">26</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow10620"><a href="javascript:void(0);" onclick="tag_showEdit(10620,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit10620"></div><span id="tagLinks10620">&nbsp;</span>
+            <span id="tagRow10620" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more10620" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">39</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=20&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu20" onclick="getExpand(20,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/20/Naruto" target="_blank" class="animetitle" title="Anime Information"><span>Naruto</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(20);" title="Click to bring up a text box to edit your current score"><span id="scoreval20">9</span></a><div id="scorediv20" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,20);" id="scoretext20" size="2"> <input type="button" value="Go" onclick="anime_updateScore(20);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">220</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow20"><a href="javascript:void(0);" onclick="tag_showEdit(20,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit20"></div><span id="tagLinks20">&nbsp;</span>
+            <span id="tagRow20" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more20" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">40</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=19815&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu19815" onclick="getExpand(19815,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/19815/No_Game_No_Life" target="_blank" class="animetitle" title="Anime Information"><span>No Game No Life</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(19815);" title="Click to bring up a text box to edit your current score"><span id="scoreval19815">10</span></a><div id="scorediv19815" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,19815);" id="scoretext19815" size="2"> <input type="button" value="Go" onclick="anime_updateScore(19815);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">12</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow19815"><a href="javascript:void(0);" onclick="tag_showEdit(19815,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit19815"></div><span id="tagLinks19815">&nbsp;</span>
+            <span id="tagRow19815" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more19815" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">41</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=20507&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu20507" onclick="getExpand(20507,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/20507/Noragami" target="_blank" class="animetitle" title="Anime Information"><span>Noragami</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(20507);" title="Click to bring up a text box to edit your current score"><span id="scoreval20507">8</span></a><div id="scorediv20507" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,20507);" id="scoretext20507" size="2"> <input type="button" value="Go" onclick="anime_updateScore(20507);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">12</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow20507"><a href="javascript:void(0);" onclick="tag_showEdit(20507,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit20507"></div><span id="tagLinks20507">&nbsp;</span>
+            <span id="tagRow20507" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more20507" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">42</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=16498&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu16498" onclick="getExpand(16498,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/16498/Shingeki_no_Kyojin" target="_blank" class="animetitle" title="Anime Information"><span>Shingeki no Kyojin</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(16498);" title="Click to bring up a text box to edit your current score"><span id="scoreval16498">9</span></a><div id="scorediv16498" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,16498);" id="scoretext16498" size="2"> <input type="button" value="Go" onclick="anime_updateScore(16498);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">25</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow16498"><a href="javascript:void(0);" onclick="tag_showEdit(16498,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit16498"></div><span id="tagLinks16498">&nbsp;</span>
+            <span id="tagRow16498" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more16498" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">43</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=18277&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu18277" onclick="getExpand(18277,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/18277/Strike_the_Blood" target="_blank" class="animetitle" title="Anime Information"><span>Strike the Blood</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(18277);" title="Click to bring up a text box to edit your current score"><span id="scoreval18277">7</span></a><div id="scorediv18277" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,18277);" id="scoretext18277" size="2"> <input type="button" value="Go" onclick="anime_updateScore(18277);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">24</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow18277"><a href="javascript:void(0);" onclick="tag_showEdit(18277,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit18277"></div><span id="tagLinks18277">&nbsp;</span>
+            <span id="tagRow18277" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more18277" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">44</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=11757&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu11757" onclick="getExpand(11757,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/11757/Sword_Art_Online" target="_blank" class="animetitle" title="Anime Information"><span>Sword Art Online</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(11757);" title="Click to bring up a text box to edit your current score"><span id="scoreval11757">10</span></a><div id="scorediv11757" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,11757);" id="scoretext11757" size="2"> <input type="button" value="Go" onclick="anime_updateScore(11757);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">25</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow11757"><a href="javascript:void(0);" onclick="tag_showEdit(11757,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit11757"></div><span id="tagLinks11757">&nbsp;</span>
+            <span id="tagRow11757" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more11757" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">45</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=21881&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu21881" onclick="getExpand(21881,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/21881/Sword_Art_Online_II" target="_blank" class="animetitle" title="Anime Information"><span>Sword Art Online II</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(21881);" title="Click to bring up a text box to edit your current score"><span id="scoreval21881">8</span></a><div id="scorediv21881" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,21881);" id="scoretext21881" size="2"> <input type="button" value="Go" onclick="anime_updateScore(21881);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">24</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow21881"><a href="javascript:void(0);" onclick="tag_showEdit(21881,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit21881"></div><span id="tagLinks21881">&nbsp;</span>
+            <span id="tagRow21881" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more21881" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">46</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=21353&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu21353" onclick="getExpand(21353,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/21353/Tokyo_ESP" target="_blank" class="animetitle" title="Anime Information"><span>Tokyo ESP</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(21353);" title="Click to bring up a text box to edit your current score"><span id="scoreval21353">7</span></a><div id="scorediv21353" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,21353);" id="scoretext21353" size="2"> <input type="button" value="Go" onclick="anime_updateScore(21353);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">12</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow21353"><a href="javascript:void(0);" onclick="tag_showEdit(21353,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit21353"></div><span id="tagLinks21353">&nbsp;</span>
+            <span id="tagRow21353" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more21353" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">47</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=22319&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu22319" onclick="getExpand(22319,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/22319/Tokyo_Ghoul" target="_blank" class="animetitle" title="Anime Information"><span>Tokyo Ghoul</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(22319);" title="Click to bring up a text box to edit your current score"><span id="scoreval22319">10</span></a><div id="scorediv22319" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,22319);" id="scoretext22319" size="2"> <input type="button" value="Go" onclick="anime_updateScore(22319);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">12</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow22319"><a href="javascript:void(0);" onclick="tag_showEdit(22319,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit22319"></div><span id="tagLinks22319">&nbsp;</span>
+            <span id="tagRow22319" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more22319" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">48</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=16011&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu16011" onclick="getExpand(16011,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/16011/Tokyo_Ravens" target="_blank" class="animetitle" title="Anime Information"><span>Tokyo Ravens</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(16011);" title="Click to bring up a text box to edit your current score"><span id="scoreval16011">9</span></a><div id="scorediv16011" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,16011);" id="scoretext16011" size="2"> <input type="button" value="Go" onclick="anime_updateScore(16011);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">24</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow16011"><a href="javascript:void(0);" onclick="tag_showEdit(16011,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit16011"></div><span id="tagLinks16011">&nbsp;</span>
+            <span id="tagRow16011" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more16011" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">49</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=23283&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu23283" onclick="getExpand(23283,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/23283/Zankyou_no_Terror" target="_blank" class="animetitle" title="Anime Information"><span>Zankyou no Terror</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(23283);" title="Click to bring up a text box to edit your current score"><span id="scoreval23283">7</span></a><div id="scorediv23283" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,23283);" id="scoretext23283" size="2"> <input type="button" value="Go" onclick="anime_updateScore(23283);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70">11</td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow23283"><a href="javascript:void(0);" onclick="tag_showEdit(23283,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit23283"></div><span id="tagLinks23283">&nbsp;</span>
+            <span id="tagRow23283" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more23283" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">50</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=14075&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu14075" onclick="getExpand(14075,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/14075/Zetsuen_no_Tempest" target="_blank" class="animetitle" title="Anime Information"><span>Zetsuen no Tempest</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(14075);" title="Click to bring up a text box to edit your current score"><span id="scoreval14075">9</span></a><div id="scorediv14075" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,14075);" id="scoretext14075" size="2"> <input type="button" value="Go" onclick="anime_updateScore(14075);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70">24</td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow14075"><a href="javascript:void(0);" onclick="tag_showEdit(14075,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit14075"></div><span id="tagLinks14075">&nbsp;</span>
+            <span id="tagRow14075" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more14075" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+
+<table border="0" width="920" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td class="category_totals">
+            TV: 41,
+            OVA: 1,
+            Movies: 4,
+            <span title="Specials">Spcl.</span>: 4,
+            Eps: 1,731,
+            <span title="Downloaded Episodes">DL Eps</span>: 0,
+            Days: 29.06,
+            Mean Score: 8.6,
+            Score <span title="Deviation">Dev.</span>: 0.63
+        </td>
+    </tr>
+    </tbody></table>
+<br>		<table border="0" cellpadding="0" cellspacing="0" width="920" align="center" class="header_onhold">
+    <tbody><tr>
+        <td>
+            <div class="header_title">
+                <span>Din mamma brä</span>
+            </div></td>
+    </tr>
+    </tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td class="table_header" width="30" align="center" style="border-width: 1px 1px 1px 1px;"><b><span class="table_headerLink">#</span></b></td>
+        <td class="table_header" style="border-left-width: 0"><a href="/animelist/Donzu&amp;show=0&amp;order=1" class="table_headerLink"><strong>Anime
+            Title</strong></a></td>
+        <td class="table_header" width="45" align="center"><strong><a href="/animelist/Donzu&amp;show=0&amp;order=4" class="table_headerLink" rel="#infoscore">Score</a></strong>
+            <div id="infoscore" style="display: none;">10 - Masterpiece<br>
+                9 - Great<br>
+                8 - Very Good<br>
+                7 - Good<br>
+                6 - Fine<br>
+                5 - Average<br>
+                4 - Bad<br>
+                3 - Very Bad<br>
+                2 - Horrible<br>
+                1 - Unwatchable</div>
+        </td>
+        <td class="table_header" width="50" align="center" nowrap=""><strong><a href="/animelist/Donzu&amp;show=0&amp;order=6" class="table_headerLink" rel="#infotype">Type</a></strong>
+            <div id="infotype" style="display: none;">TV (Television Series)<br>
+                Movie<br>
+                OVA (Original Video Animation)</div>
+        </td>
+
+        <td class="table_header" width="70" align="center" nowrap=""><strong><a href="/animelist/Donzu&amp;show=0&amp;order=12" class="table_headerLink">Progress</a></strong></td>
+        <td class="table_header" width="125" align="center" nowrap=""><strong>Tags</strong></td>
+    </tr>
+    </tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">1</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=918&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu918" onclick="getExpand(918,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/918/Gintama" target="_blank" class="animetitle" title="Anime Information"><span>Gintama</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(918);" title="Click to bring up a text box to edit your current score"><span id="scoreval918">7</span></a><div id="scorediv918" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,918);" id="scoretext918" size="2"> <input type="button" value="Go" onclick="anime_updateScore(918);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText918" onclick="determineEpVisibility('918');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output918">11</span>/201</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(918,'201','2',3,918);">+</a><div style="display: none;" id="holdDynamicEpNum918">12</div><form name="changeEpXMLHTTP[918]" method="get" onsubmit="return changeep_loadurl('918','201','2',3,0,918);" style="display: inline;"><span id="epLayer918" style="display: none;"><input type="text" name="change_ep_num[918]" id="epID918" size="2"><br><input type="submit" value="Go" name="submitEp[918]" onclick="return changeep_loadurl('918','201','2',3,0,918);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow918"><a href="javascript:void(0);" onclick="tag_showEdit(918,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit918"></div><span id="tagLinks918">&nbsp;</span>
+            <span id="tagRow918" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more918" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">2</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=20785&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu20785" onclick="getExpand(20785,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/20785/Mahouka_Koukou_no_Rettousei" target="_blank" class="animetitle" title="Anime Information"><span>Mahouka Koukou no Rettousei</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(20785);" title="Click to bring up a text box to edit your current score"><span id="scoreval20785">7</span></a><div id="scorediv20785" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,20785);" id="scoretext20785" size="2"> <input type="button" value="Go" onclick="anime_updateScore(20785);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText20785" onclick="determineEpVisibility('20785');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output20785">19</span>/26</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(20785,'26','2',3,20785);">+</a><div style="display: none;" id="holdDynamicEpNum20785">20</div><form name="changeEpXMLHTTP[20785]" method="get" onsubmit="return changeep_loadurl('20785','26','2',3,0,20785);" style="display: inline;"><span id="epLayer20785" style="display: none;"><input type="text" name="change_ep_num[20785]" id="epID20785" size="2"><br><input type="submit" value="Go" name="submitEp[20785]" onclick="return changeep_loadurl('20785','26','2',3,0,20785);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow20785"><a href="javascript:void(0);" onclick="tag_showEdit(20785,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit20785"></div><span id="tagLinks20785">&nbsp;</span>
+            <span id="tagRow20785" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more20785" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">3</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=4654&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu4654" onclick="getExpand(4654,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/4654/Toaru_Majutsu_no_Index" target="_blank" class="animetitle" title="Anime Information"><span>Toaru Majutsu no Index</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(4654);" title="Click to bring up a text box to edit your current score"><span id="scoreval4654">7</span></a><div id="scorediv4654" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,4654);" id="scoretext4654" size="2"> <input type="button" value="Go" onclick="anime_updateScore(4654);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText4654" onclick="determineEpVisibility('4654');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output4654">6</span>/24</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(4654,'24','2',3,4654);">+</a><div style="display: none;" id="holdDynamicEpNum4654">7</div><form name="changeEpXMLHTTP[4654]" method="get" onsubmit="return changeep_loadurl('4654','24','2',3,0,4654);" style="display: inline;"><span id="epLayer4654" style="display: none;"><input type="text" name="change_ep_num[4654]" id="epID4654" size="2"><br><input type="submit" value="Go" name="submitEp[4654]" onclick="return changeep_loadurl('4654','24','2',3,0,4654);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow4654"><a href="javascript:void(0);" onclick="tag_showEdit(4654,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit4654"></div><span id="tagLinks4654">&nbsp;</span>
+            <span id="tagRow4654" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more4654" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+
+<table border="0" width="920" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td class="category_totals">
+            TV: 3,
+            OVA: 0,
+            Movies: 0,
+            <span title="Specials">Spcl.</span>: 0,
+            Eps: 36,
+            <span title="Downloaded Episodes">DL Eps</span>: 0,
+            Days: 0.60,
+            Mean Score: 7.0,
+            Score <span title="Deviation">Dev.</span>: -1.22
+        </td>
+    </tr>
+    </tbody></table>
+<br>		<table border="0" cellpadding="0" cellspacing="0" width="920" align="center" class="header_ptw">
+    <tbody><tr>
+        <td>
+            <div class="header_title">
+                <span>Plan to Watch</span>
+            </div></td>
+    </tr>
+    </tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td class="table_header" width="30" align="center" style="border-width: 1px 1px 1px 1px;"><b><span class="table_headerLink">#</span></b></td>
+        <td class="table_header" style="border-left-width: 0"><a href="/animelist/Donzu&amp;show=0&amp;order=1" class="table_headerLink"><strong>Anime
+            Title</strong></a></td>
+        <td class="table_header" width="45" align="center"><strong><a href="/animelist/Donzu&amp;show=0&amp;order=4" class="table_headerLink" rel="#infoscore">Score</a></strong>
+            <div id="infoscore" style="display: none;">10 - Masterpiece<br>
+                9 - Great<br>
+                8 - Very Good<br>
+                7 - Good<br>
+                6 - Fine<br>
+                5 - Average<br>
+                4 - Bad<br>
+                3 - Very Bad<br>
+                2 - Horrible<br>
+                1 - Unwatchable</div>
+        </td>
+        <td class="table_header" width="50" align="center" nowrap=""><strong><a href="/animelist/Donzu&amp;show=0&amp;order=6" class="table_headerLink" rel="#infotype">Type</a></strong>
+            <div id="infotype" style="display: none;">TV (Television Series)<br>
+                Movie<br>
+                OVA (Original Video Animation)</div>
+        </td>
+
+        <td class="table_header" width="70" align="center" nowrap=""><strong><a href="/animelist/Donzu&amp;show=0&amp;order=12" class="table_headerLink">Progress</a></strong></td>
+        <td class="table_header" width="125" align="center" nowrap=""><strong>Tags</strong></td>
+    </tr>
+    </tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">1</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=54&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu54" onclick="getExpand(54,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/54/Appleseed_(Movie)" target="_blank" class="animetitle" title="Anime Information"><span>Appleseed (Movie)</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(54);" title="Click to bring up a text box to edit your current score"><span id="scoreval54">-</span></a><div id="scorediv54" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,54);" id="scoretext54" size="2"> <input type="button" value="Go" onclick="anime_updateScore(54);"></div></td>
+        <td class="td1" width="50" align="center">Movie</td>
+        <td class="td1" align="center" width="70"><span id="epText54" onclick="determineEpVisibility('54');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output54">-</span>/1</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(54,'1','2',6,54);">+</a><div style="display: none;" id="holdDynamicEpNum54">1</div><form name="changeEpXMLHTTP[54]" method="get" onsubmit="return changeep_loadurl('54','1','2',6,0,54);" style="display: inline;"><span id="epLayer54" style="display: none;"><input type="text" name="change_ep_num[54]" id="epID54" size="2"><br><input type="submit" value="Go" name="submitEp[54]" onclick="return changeep_loadurl('54','1','2',6,0,54);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow54"><a href="javascript:void(0);" onclick="tag_showEdit(54,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit54"></div><span id="tagLinks54">&nbsp;</span>
+            <span id="tagRow54" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more54" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">2</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=5081&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu5081" onclick="getExpand(5081,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/5081/Bakemonogatari" target="_blank" class="animetitle" title="Anime Information"><span>Bakemonogatari</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(5081);" title="Click to bring up a text box to edit your current score"><span id="scoreval5081">-</span></a><div id="scorediv5081" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,5081);" id="scoretext5081" size="2"> <input type="button" value="Go" onclick="anime_updateScore(5081);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText5081" onclick="determineEpVisibility('5081');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output5081">-</span>/15</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(5081,'15','2',6,5081);">+</a><div style="display: none;" id="holdDynamicEpNum5081">1</div><form name="changeEpXMLHTTP[5081]" method="get" onsubmit="return changeep_loadurl('5081','15','2',6,0,5081);" style="display: inline;"><span id="epLayer5081" style="display: none;"><input type="text" name="change_ep_num[5081]" id="epID5081" size="2"><br><input type="submit" value="Go" name="submitEp[5081]" onclick="return changeep_loadurl('5081','15','2',6,0,5081);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow5081"><a href="javascript:void(0);" onclick="tag_showEdit(5081,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit5081"></div><span id="tagLinks5081">&nbsp;</span>
+            <span id="tagRow5081" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more5081" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">3</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=150&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu150" onclick="getExpand(150,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/150/Blood+" target="_blank" class="animetitle" title="Anime Information"><span>Blood+</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(150);" title="Click to bring up a text box to edit your current score"><span id="scoreval150">-</span></a><div id="scorediv150" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,150);" id="scoretext150" size="2"> <input type="button" value="Go" onclick="anime_updateScore(150);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText150" onclick="determineEpVisibility('150');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output150">-</span>/50</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(150,'50','2',6,150);">+</a><div style="display: none;" id="holdDynamicEpNum150">1</div><form name="changeEpXMLHTTP[150]" method="get" onsubmit="return changeep_loadurl('150','50','2',6,0,150);" style="display: inline;"><span id="epLayer150" style="display: none;"><input type="text" name="change_ep_num[150]" id="epID150" size="2"><br><input type="submit" value="Go" name="submitEp[150]" onclick="return changeep_loadurl('150','50','2',6,0,150);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow150"><a href="javascript:void(0);" onclick="tag_showEdit(150,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit150"></div><span id="tagLinks150">&nbsp;</span>
+            <span id="tagRow150" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more150" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">4</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=4186&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu4186" onclick="getExpand(4186,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/4186/Chrome_Shelled_Regios" target="_blank" class="animetitle" title="Anime Information"><span>Chrome Shelled Regios</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(4186);" title="Click to bring up a text box to edit your current score"><span id="scoreval4186">-</span></a><div id="scorediv4186" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,4186);" id="scoretext4186" size="2"> <input type="button" value="Go" onclick="anime_updateScore(4186);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText4186" onclick="determineEpVisibility('4186');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output4186">-</span>/24</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(4186,'24','2',6,4186);">+</a><div style="display: none;" id="holdDynamicEpNum4186">1</div><form name="changeEpXMLHTTP[4186]" method="get" onsubmit="return changeep_loadurl('4186','24','2',6,0,4186);" style="display: inline;"><span id="epLayer4186" style="display: none;"><input type="text" name="change_ep_num[4186]" id="epID4186" size="2"><br><input type="submit" value="Go" name="submitEp[4186]" onclick="return changeep_loadurl('4186','24','2',6,0,4186);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow4186"><a href="javascript:void(0);" onclick="tag_showEdit(4186,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit4186"></div><span id="tagLinks4186">&nbsp;</span>
+            <span id="tagRow4186" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more4186" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">5</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=15583&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu15583" onclick="getExpand(15583,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/15583/Date_A_Live" target="_blank" class="animetitle" title="Anime Information"><span>Date A Live</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(15583);" title="Click to bring up a text box to edit your current score"><span id="scoreval15583">-</span></a><div id="scorediv15583" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,15583);" id="scoretext15583" size="2"> <input type="button" value="Go" onclick="anime_updateScore(15583);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText15583" onclick="determineEpVisibility('15583');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output15583">-</span>/12</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(15583,'12','2',6,15583);">+</a><div style="display: none;" id="holdDynamicEpNum15583">1</div><form name="changeEpXMLHTTP[15583]" method="get" onsubmit="return changeep_loadurl('15583','12','2',6,0,15583);" style="display: inline;"><span id="epLayer15583" style="display: none;"><input type="text" name="change_ep_num[15583]" id="epID15583" size="2"><br><input type="submit" value="Go" name="submitEp[15583]" onclick="return changeep_loadurl('15583','12','2',6,0,15583);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow15583"><a href="javascript:void(0);" onclick="tag_showEdit(15583,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit15583"></div><span id="tagLinks15583">&nbsp;</span>
+            <span id="tagRow15583" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more15583" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">6</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=9330&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu9330" onclick="getExpand(9330,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/9330/Dragon_Crisis!" target="_blank" class="animetitle" title="Anime Information"><span>Dragon Crisis!</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(9330);" title="Click to bring up a text box to edit your current score"><span id="scoreval9330">-</span></a><div id="scorediv9330" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,9330);" id="scoretext9330" size="2"> <input type="button" value="Go" onclick="anime_updateScore(9330);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText9330" onclick="determineEpVisibility('9330');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output9330">-</span>/12</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(9330,'12','2',6,9330);">+</a><div style="display: none;" id="holdDynamicEpNum9330">1</div><form name="changeEpXMLHTTP[9330]" method="get" onsubmit="return changeep_loadurl('9330','12','2',6,0,9330);" style="display: inline;"><span id="epLayer9330" style="display: none;"><input type="text" name="change_ep_num[9330]" id="epID9330" size="2"><br><input type="submit" value="Go" name="submitEp[9330]" onclick="return changeep_loadurl('9330','12','2',6,0,9330);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow9330"><a href="javascript:void(0);" onclick="tag_showEdit(9330,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit9330"></div><span id="tagLinks9330">&nbsp;</span>
+            <span id="tagRow9330" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more9330" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">7</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=790&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu790" onclick="getExpand(790,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/790/Ergo_Proxy" target="_blank" class="animetitle" title="Anime Information"><span>Ergo Proxy</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(790);" title="Click to bring up a text box to edit your current score"><span id="scoreval790">-</span></a><div id="scorediv790" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,790);" id="scoretext790" size="2"> <input type="button" value="Go" onclick="anime_updateScore(790);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText790" onclick="determineEpVisibility('790');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output790">-</span>/23</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(790,'23','2',6,790);">+</a><div style="display: none;" id="holdDynamicEpNum790">1</div><form name="changeEpXMLHTTP[790]" method="get" onsubmit="return changeep_loadurl('790','23','2',6,0,790);" style="display: inline;"><span id="epLayer790" style="display: none;"><input type="text" name="change_ep_num[790]" id="epID790" size="2"><br><input type="submit" value="Go" name="submitEp[790]" onclick="return changeep_loadurl('790','23','2',6,0,790);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow790"><a href="javascript:void(0);" onclick="tag_showEdit(790,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit790"></div><span id="tagLinks790">&nbsp;</span>
+            <span id="tagRow790" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more790" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">8</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=8425&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu8425" onclick="getExpand(8425,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/8425/Gosick" target="_blank" class="animetitle" title="Anime Information"><span>Gosick</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(8425);" title="Click to bring up a text box to edit your current score"><span id="scoreval8425">-</span></a><div id="scorediv8425" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,8425);" id="scoretext8425" size="2"> <input type="button" value="Go" onclick="anime_updateScore(8425);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText8425" onclick="determineEpVisibility('8425');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output8425">-</span>/24</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(8425,'24','2',6,8425);">+</a><div style="display: none;" id="holdDynamicEpNum8425">1</div><form name="changeEpXMLHTTP[8425]" method="get" onsubmit="return changeep_loadurl('8425','24','2',6,0,8425);" style="display: inline;"><span id="epLayer8425" style="display: none;"><input type="text" name="change_ep_num[8425]" id="epID8425" size="2"><br><input type="submit" value="Go" name="submitEp[8425]" onclick="return changeep_loadurl('8425','24','2',6,0,8425);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow8425"><a href="javascript:void(0);" onclick="tag_showEdit(8425,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit8425"></div><span id="tagLinks8425">&nbsp;</span>
+            <span id="tagRow8425" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more8425" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">9</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=14765&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu14765" onclick="getExpand(14765,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/14765/Ixion_Saga_DT" target="_blank" class="animetitle" title="Anime Information"><span>Ixion Saga DT</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(14765);" title="Click to bring up a text box to edit your current score"><span id="scoreval14765">-</span></a><div id="scorediv14765" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,14765);" id="scoretext14765" size="2"> <input type="button" value="Go" onclick="anime_updateScore(14765);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText14765" onclick="determineEpVisibility('14765');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output14765">-</span>/25</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(14765,'25','2',6,14765);">+</a><div style="display: none;" id="holdDynamicEpNum14765">1</div><form name="changeEpXMLHTTP[14765]" method="get" onsubmit="return changeep_loadurl('14765','25','2',6,0,14765);" style="display: inline;"><span id="epLayer14765" style="display: none;"><input type="text" name="change_ep_num[14765]" id="epID14765" size="2"><br><input type="submit" value="Go" name="submitEp[14765]" onclick="return changeep_loadurl('14765','25','2',6,0,14765);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow14765"><a href="javascript:void(0);" onclick="tag_showEdit(14765,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit14765"></div><span id="tagLinks14765">&nbsp;</span>
+            <span id="tagRow14765" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more14765" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">10</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=1691&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu1691" onclick="getExpand(1691,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/1691/Kaze_no_Stigma" target="_blank" class="animetitle" title="Anime Information"><span>Kaze no Stigma</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(1691);" title="Click to bring up a text box to edit your current score"><span id="scoreval1691">-</span></a><div id="scorediv1691" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,1691);" id="scoretext1691" size="2"> <input type="button" value="Go" onclick="anime_updateScore(1691);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText1691" onclick="determineEpVisibility('1691');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output1691">-</span>/24</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(1691,'24','2',6,1691);">+</a><div style="display: none;" id="holdDynamicEpNum1691">1</div><form name="changeEpXMLHTTP[1691]" method="get" onsubmit="return changeep_loadurl('1691','24','2',6,0,1691);" style="display: inline;"><span id="epLayer1691" style="display: none;"><input type="text" name="change_ep_num[1691]" id="epID1691" size="2"><br><input type="submit" value="Go" name="submitEp[1691]" onclick="return changeep_loadurl('1691','24','2',6,0,1691);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow1691"><a href="javascript:void(0);" onclick="tag_showEdit(1691,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit1691"></div><span id="tagLinks1691">&nbsp;</span>
+            <span id="tagRow1691" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more1691" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">11</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=18679&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu18679" onclick="getExpand(18679,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/18679/Kill_la_Kill" target="_blank" class="animetitle" title="Anime Information"><span>Kill la Kill</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(18679);" title="Click to bring up a text box to edit your current score"><span id="scoreval18679">-</span></a><div id="scorediv18679" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,18679);" id="scoretext18679" size="2"> <input type="button" value="Go" onclick="anime_updateScore(18679);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText18679" onclick="determineEpVisibility('18679');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output18679">1</span>/24</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(18679,'24','2',6,18679);">+</a><div style="display: none;" id="holdDynamicEpNum18679">2</div><form name="changeEpXMLHTTP[18679]" method="get" onsubmit="return changeep_loadurl('18679','24','2',6,0,18679);" style="display: inline;"><span id="epLayer18679" style="display: none;"><input type="text" name="change_ep_num[18679]" id="epID18679" size="2"><br><input type="submit" value="Go" name="submitEp[18679]" onclick="return changeep_loadurl('18679','24','2',6,0,18679);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow18679"><a href="javascript:void(0);" onclick="tag_showEdit(18679,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit18679"></div><span id="tagLinks18679">&nbsp;</span>
+            <span id="tagRow18679" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more18679" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">12</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=18153&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu18153" onclick="getExpand(18153,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/18153/Kyoukai_no_Kanata" target="_blank" class="animetitle" title="Anime Information"><span>Kyoukai no Kanata</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(18153);" title="Click to bring up a text box to edit your current score"><span id="scoreval18153">-</span></a><div id="scorediv18153" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,18153);" id="scoretext18153" size="2"> <input type="button" value="Go" onclick="anime_updateScore(18153);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText18153" onclick="determineEpVisibility('18153');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output18153">-</span>/12</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(18153,'12','2',6,18153);">+</a><div style="display: none;" id="holdDynamicEpNum18153">1</div><form name="changeEpXMLHTTP[18153]" method="get" onsubmit="return changeep_loadurl('18153','12','2',6,0,18153);" style="display: inline;"><span id="epLayer18153" style="display: none;"><input type="text" name="change_ep_num[18153]" id="epID18153" size="2"><br><input type="submit" value="Go" name="submitEp[18153]" onclick="return changeep_loadurl('18153','12','2',6,0,18153);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow18153"><a href="javascript:void(0);" onclick="tag_showEdit(18153,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit18153"></div><span id="tagLinks18153">&nbsp;</span>
+            <span id="tagRow18153" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more18153" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">13</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=9756&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu9756" onclick="getExpand(9756,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/9756/Mahou_Shoujo_Madoka★Magica" target="_blank" class="animetitle" title="Anime Information"><span>Mahou Shoujo Madoka★Magica</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(9756);" title="Click to bring up a text box to edit your current score"><span id="scoreval9756">-</span></a><div id="scorediv9756" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,9756);" id="scoretext9756" size="2"> <input type="button" value="Go" onclick="anime_updateScore(9756);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText9756" onclick="determineEpVisibility('9756');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output9756">-</span>/12</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(9756,'12','2',6,9756);">+</a><div style="display: none;" id="holdDynamicEpNum9756">1</div><form name="changeEpXMLHTTP[9756]" method="get" onsubmit="return changeep_loadurl('9756','12','2',6,0,9756);" style="display: inline;"><span id="epLayer9756" style="display: none;"><input type="text" name="change_ep_num[9756]" id="epID9756" size="2"><br><input type="submit" value="Go" name="submitEp[9756]" onclick="return changeep_loadurl('9756','12','2',6,0,9756);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow9756"><a href="javascript:void(0);" onclick="tag_showEdit(9756,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit9756"></div><span id="tagLinks9756">&nbsp;</span>
+            <span id="tagRow9756" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more9756" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">14</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=457&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu457" onclick="getExpand(457,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/457/Mushishi" target="_blank" class="animetitle" title="Anime Information"><span>Mushishi</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(457);" title="Click to bring up a text box to edit your current score"><span id="scoreval457">-</span></a><div id="scorediv457" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,457);" id="scoretext457" size="2"> <input type="button" value="Go" onclick="anime_updateScore(457);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText457" onclick="determineEpVisibility('457');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output457">-</span>/26</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(457,'26','2',6,457);">+</a><div style="display: none;" id="holdDynamicEpNum457">1</div><form name="changeEpXMLHTTP[457]" method="get" onsubmit="return changeep_loadurl('457','26','2',6,0,457);" style="display: inline;"><span id="epLayer457" style="display: none;"><input type="text" name="change_ep_num[457]" id="epID457" size="2"><br><input type="submit" value="Go" name="submitEp[457]" onclick="return changeep_loadurl('457','26','2',6,0,457);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow457"><a href="javascript:void(0);" onclick="tag_showEdit(457,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit457"></div><span id="tagLinks457">&nbsp;</span>
+            <span id="tagRow457" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more457" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">15</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=5682&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu5682" onclick="getExpand(5682,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/5682/Phantom:_Requiem_for_the_Phantom" target="_blank" class="animetitle" title="Anime Information"><span>Phantom: Requiem for the Phantom</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(5682);" title="Click to bring up a text box to edit your current score"><span id="scoreval5682">-</span></a><div id="scorediv5682" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,5682);" id="scoretext5682" size="2"> <input type="button" value="Go" onclick="anime_updateScore(5682);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText5682" onclick="determineEpVisibility('5682');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output5682">-</span>/26</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(5682,'26','2',6,5682);">+</a><div style="display: none;" id="holdDynamicEpNum5682">1</div><form name="changeEpXMLHTTP[5682]" method="get" onsubmit="return changeep_loadurl('5682','26','2',6,0,5682);" style="display: inline;"><span id="epLayer5682" style="display: none;"><input type="text" name="change_ep_num[5682]" id="epID5682" size="2"><br><input type="submit" value="Go" name="submitEp[5682]" onclick="return changeep_loadurl('5682','26','2',6,0,5682);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow5682"><a href="javascript:void(0);" onclick="tag_showEdit(5682,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit5682"></div><span id="tagLinks5682">&nbsp;</span>
+            <span id="tagRow5682" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more5682" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">16</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=6114&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu6114" onclick="getExpand(6114,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/6114/Rainbow:_Nisha_Rokubou_no_Shichinin" target="_blank" class="animetitle" title="Anime Information"><span>Rainbow: Nisha Rokubou no Shichinin</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(6114);" title="Click to bring up a text box to edit your current score"><span id="scoreval6114">-</span></a><div id="scorediv6114" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,6114);" id="scoretext6114" size="2"> <input type="button" value="Go" onclick="anime_updateScore(6114);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText6114" onclick="determineEpVisibility('6114');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output6114">-</span>/26</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(6114,'26','2',6,6114);">+</a><div style="display: none;" id="holdDynamicEpNum6114">1</div><form name="changeEpXMLHTTP[6114]" method="get" onsubmit="return changeep_loadurl('6114','26','2',6,0,6114);" style="display: inline;"><span id="epLayer6114" style="display: none;"><input type="text" name="change_ep_num[6114]" id="epID6114" size="2"><br><input type="submit" value="Go" name="submitEp[6114]" onclick="return changeep_loadurl('6114','26','2',6,0,6114);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow6114"><a href="javascript:void(0);" onclick="tag_showEdit(6114,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit6114"></div><span id="tagLinks6114">&nbsp;</span>
+            <span id="tagRow6114" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more6114" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">17</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=355&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu355" onclick="getExpand(355,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/355/Shakugan_no_Shana" target="_blank" class="animetitle" title="Anime Information"><span>Shakugan no Shana</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(355);" title="Click to bring up a text box to edit your current score"><span id="scoreval355">-</span></a><div id="scorediv355" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,355);" id="scoretext355" size="2"> <input type="button" value="Go" onclick="anime_updateScore(355);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText355" onclick="determineEpVisibility('355');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output355">-</span>/24</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(355,'24','2',6,355);">+</a><div style="display: none;" id="holdDynamicEpNum355">1</div><form name="changeEpXMLHTTP[355]" method="get" onsubmit="return changeep_loadurl('355','24','2',6,0,355);" style="display: inline;"><span id="epLayer355" style="display: none;"><input type="text" name="change_ep_num[355]" id="epID355" size="2"><br><input type="submit" value="Go" name="submitEp[355]" onclick="return changeep_loadurl('355','24','2',6,0,355);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow355"><a href="javascript:void(0);" onclick="tag_showEdit(355,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit355"></div><span id="tagLinks355">&nbsp;</span>
+            <span id="tagRow355" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more355" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td2" style="border-left-width: 1px;">18</td>
+        <td class="td2" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=2787&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu2787" onclick="getExpand(2787,2);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/2787/Shakugan_no_Shana_II_(Second)" target="_blank" class="animetitle" title="Anime Information"><span>Shakugan no Shana II (Second)</span></a> </td>
+        <td class="td2" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(2787);" title="Click to bring up a text box to edit your current score"><span id="scoreval2787">-</span></a><div id="scorediv2787" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,2787);" id="scoretext2787" size="2"> <input type="button" value="Go" onclick="anime_updateScore(2787);"></div></td>
+        <td class="td2" width="50" align="center">TV</td>
+        <td class="td2" align="center" width="70"><span id="epText2787" onclick="determineEpVisibility('2787');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output2787">-</span>/24</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(2787,'24','2',6,2787);">+</a><div style="display: none;" id="holdDynamicEpNum2787">1</div><form name="changeEpXMLHTTP[2787]" method="get" onsubmit="return changeep_loadurl('2787','24','2',6,0,2787);" style="display: inline;"><span id="epLayer2787" style="display: none;"><input type="text" name="change_ep_num[2787]" id="epID2787" size="2"><br><input type="submit" value="Go" name="submitEp[2787]" onclick="return changeep_loadurl('2787','24','2',6,0,2787);"></span></form></td>
+        <td class="td2" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow2787"><a href="javascript:void(0);" onclick="tag_showEdit(2787,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit2787"></div><span id="tagLinks2787">&nbsp;</span>
+            <span id="tagRow2787" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more2787" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+<table border="0" cellpadding="0" cellspacing="0" width="920">
+    <tbody><tr>
+        <td align="center" width="30" class="td1" style="border-left-width: 1px;">19</td>
+        <td class="td1" style="border-left-width: 0">
+
+            <div style="float: right;">
+                <small>
+                    <a href="/editlist.php?type=anime&amp;id=9253&amp;hideLayout=true" class="List_LightBox">Edit</a> -
+                    <a href="javascript:void(0);" id="xmenu9253" onclick="getExpand(9253,1);" title="View More Information">More</a>
+                </small>
+            </div><a href="/anime/9253/Steins;Gate" target="_blank" class="animetitle" title="Anime Information"><span>Steins;Gate</span></a> </td>
+        <td class="td1" align="center" width="45"><a href="javascript:void(0);" onclick="anime_scoreDisplay(9253);" title="Click to bring up a text box to edit your current score"><span id="scoreval9253">-</span></a><div id="scorediv9253" style="display: none;"><input type="text" onkeydown="anime_checkScoreEnter(event,9253);" id="scoretext9253" size="2"> <input type="button" value="Go" onclick="anime_updateScore(9253);"></div></td>
+        <td class="td1" width="50" align="center">TV</td>
+        <td class="td1" align="center" width="70"><span id="epText9253" onclick="determineEpVisibility('9253');"><a href="javascript:void(0);" title="Click to bring up a text box to edit your current episode number"><span id="output9253">-</span>/24</a></span> <a href="javascript:void(0);" title="Click to increase your watched ep number by one" onclick="updateEpNumByOne(9253,'24','2',6,9253);">+</a><div style="display: none;" id="holdDynamicEpNum9253">1</div><form name="changeEpXMLHTTP[9253]" method="get" onsubmit="return changeep_loadurl('9253','24','2',6,0,9253);" style="display: inline;"><span id="epLayer9253" style="display: none;"><input type="text" name="change_ep_num[9253]" id="epID9253" size="2"><br><input type="submit" value="Go" name="submitEp[9253]" onclick="return changeep_loadurl('9253','24','2',6,0,9253);"></span></form></td>
+        <td class="td1" width="125" align="left">
+            <div style="float: right;" id="tagChangeRow9253"><a href="javascript:void(0);" onclick="tag_showEdit(9253,1);"><small>edit</small></a></div>
+
+            <div id="tagRowEdit9253"></div><span id="tagLinks9253">&nbsp;</span>
+            <span id="tagRow9253" style="display: none;"></span></td>
+
+    </tr>
+    </tbody></table>
+
+<!-- START HIDDEN -->
+<div id="more9253" class="hide" style="width:920px"></div>
+<!-- // END HIDDEN -->
+
+<table border="0" width="920" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td class="category_totals">
+            TV: 18,
+            OVA: 0,
+            Movies: 1,
+            <span title="Specials">Spcl.</span>: 0,
+            Eps: 1,
+            <span title="Downloaded Episodes">DL Eps</span>: 0,
+            Days: ,
+            Mean Score: 0.0,
+            Score <span title="Deviation">Dev.</span>: 0
+        </td>
+    </tr>
+    </tbody></table>
+<br>
+<div id="inlineContent" style="display: none;"></div>
+<div id="grand_totals">TV: 68,
+    OVA: 1,
+    Movies: 5,
+    <span title="Specials">Spcl.</span>: 4,
+    Eps: 2,854,
+    <span title="Downloaded Episodes">DL Eps</span>: 0,
+    Days: 47.54,
+    Mean Score: 25.6,
+    Score <span title="Deviation">Dev.</span>: 1.1
+</div>
+
+<input type="hidden" id="listUserId" value="3948647">
+<input type="hidden" id="listUserName" value="Donzu">
+<input type="hidden" id="listType" value="anime">
+<!-- Begin comScore Tag -->
+<script>
+    document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script><script src="http://b.scorecardresearch.com/beacon.js"></script>
+
+<script>
+    COMSCORE.beacon({
+        c1:2,
+        c2:6036161,
+        c3:"",
+        c4:"",
+        c5:"",
+        c6:"",
+        c15:""
+    });
+</script>
+<noscript>
+    &lt;img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6036161&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c15=&amp;cj=1" /&gt;
+</noscript>
+<!-- End comScore Tag -->
+
+<!-- start Vibrant Media IntelliTXT script section -->
+<script type="text/javascript" src="http://myanimelist.us.intellitxt.com/intellitxt/front.asp?ipid=30532"></script>
+<!-- end Vibrant Media IntelliTXT script section -->
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancy-bg" id="fancy-bg-n"></div><div class="fancy-bg" id="fancy-bg-ne"></div><div class="fancy-bg" id="fancy-bg-e"></div><div class="fancy-bg" id="fancy-bg-se"></div><div class="fancy-bg" id="fancy-bg-s"></div><div class="fancy-bg" id="fancy-bg-sw"></div><div class="fancy-bg" id="fancy-bg-w"></div><div class="fancy-bg" id="fancy-bg-nw"></div><div id="fancybox-inner"></div><a id="fancybox-close"></a><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
+</body>
+</html>
