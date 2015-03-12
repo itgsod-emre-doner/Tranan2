@@ -1,0 +1,19 @@
+#hemlogo {
+    text-align: center;
+    background-color: red;
+    margin-top: 0%;
+    width: 20%;
+    height: 20%;
+    border-style: solid;
+    font-size: 50px;
+}
+
+#nav-1 {
+
+    background-color: green;
+    margin-top: 2%;
+    width: 20%;
+    height: 20%;
+    border-style: solid;
+    font-size: 20px;
+}
